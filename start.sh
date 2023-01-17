@@ -1,1 +1,1 @@
-nohup python main.py `pwd` > log 2>&1 &
+nohup python3 main.py `pwd` > log 2>&1 &
