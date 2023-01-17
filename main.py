@@ -8,7 +8,7 @@ import telegram as tg
 
 def get_sys_info():
     ip = get('https://api.ipify.org').content.decode('utf8')
-    cpu_used = psutil.cpu_percent(interval=1)
+    cpu_used = psutil.cpu_percent(interval=0.5)
 
     mem_stat = psutil.virtual_memory().percent
     mem_total = psutil.virtual_memory().total / (2**30)
@@ -28,6 +28,7 @@ Memory Free: {mem_avi:.2f} / {mem_total:.2f} GB
 Disk Free:   {disk_free:.2f} / {disk_total:.2f} GB
 ```'''
 
+    print(msg)
     return msg
 
 
