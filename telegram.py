@@ -1,12 +1,14 @@
 import requests
 import config as cfg
 
-# apiUrl = f'api.telegram.org'
-apiUrl = f'tg.yinwang.xyz'
+apiUrl = f'api.telegram.org'
+
 
 def send_text(message):
     if not cfg.telegram_enable:
         return
+    if cfg.telegram_api_url != "":
+        apiUrl = cfg.telegram_api_url
 
     url = f'https://{apiUrl}/bot{cfg.telegram_api_token}/sendMessage'
     try:
@@ -24,6 +26,8 @@ def send_text(message):
 def send_md(message):
     if not cfg.telegram_enable:
         return
+    if cfg.telegram_api_url != "":
+        apiUrl = cfg.telegram_api_url
 
     url = f'https://{apiUrl}/bot{cfg.telegram_api_token}/sendMessage'
     try:
@@ -37,4 +41,3 @@ def send_md(message):
         )
     except Exception as e:
         print(e)
-
