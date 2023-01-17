@@ -5,6 +5,7 @@ apiUrl = f'api.telegram.org'
 
 
 def send_text(message):
+    global apiUrl
     if not cfg.telegram_enable:
         return
     if cfg.telegram_api_url != "":
@@ -24,6 +25,7 @@ def send_text(message):
 
 
 def send_md(message):
+    global apiUrl
     if not cfg.telegram_enable:
         return
     if cfg.telegram_api_url != "":
