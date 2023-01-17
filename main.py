@@ -23,9 +23,9 @@ def get_sys_info():
 
     msg = f'''```
 [{ip}]
-CPU:    {cpu_used}%
-Memory: {mem_avi:.2f} / {mem_total:.2f} GB
-Disk:   {disk_free:.2f} / {disk_total:.2f} GB
+CPU Used:    {cpu_used}%
+Memory Free: {mem_avi:.2f} / {mem_total:.2f} GB
+Disk Free:   {disk_free:.2f} / {disk_total:.2f} GB
 ```'''
 
     return msg
