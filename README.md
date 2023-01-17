@@ -8,7 +8,7 @@ pip install -r requirement.txt
 python main.py
 ```
 
-Than it will output:
+Then it will output:
 
 ```
 ```
