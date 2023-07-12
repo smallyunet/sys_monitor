@@ -4,7 +4,7 @@
 
 ```
 cp config-example.py config.py
-pip install -r requirement.txt
+pip install -r requirements.txt
 python main.py
 ```
 
